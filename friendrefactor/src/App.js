@@ -7,15 +7,16 @@ import friends from "./friends.json";
 
 
 let answers =[];
+// i dont think im actually using this answersdup variable
 let answersdup =[];
 let score = 0;
-function getRandomItem(friends) {
-  let items = Array.from(friends);
+// function getRandomItem(friends) {
+//   let items = Array.from(friends);
 
-  return items[Math.floor(Math.random() * friends.length)];
+//   return items[Math.floor(Math.random() * friends.length)];
 
-}
-var randomItem =[friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],  friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)] , friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)]  ]
+// }
+var randomItem =[friends[Math.floor (Math.random()*2)+1],friends[Math.floor(Math.random()*10)],  friends[Math.floor(Math.random()*12)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*10)+2],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*7)+3],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)] , friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)]  ]
 
 
 
@@ -38,7 +39,9 @@ class App extends Component {
   removeFriend = id => {
 
 
-    
+
+    var randomItem =[friends[Math.floor (Math.random()*2)+1],friends[Math.floor(Math.random()*10)],  friends[Math.floor(Math.random()*12)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*10)+2],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*7)+3],friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)] , friends[Math.floor(Math.random()*friends.length)],friends[Math.floor(Math.random()*friends.length)]  ]
+
 
     // if (id !== "used"){
     //   turns++
@@ -59,6 +62,8 @@ class App extends Component {
     
     {console.log("seems to work ");
     alert("restarting")
+    window.location.reload();
+
     function empty() {
       //empty your array
       answers = [];
@@ -75,8 +80,8 @@ class App extends Component {
     for (var j = 0; j < answers.length; j++)
     // on the line below, if you dont go in order, the array does not push. when i commented out the (id===friends[j].id clause. that seems to fix the bug. i also need to add a reset function
     // if (id===friends[j].id){
-    answersdup.push(friends[i].name) ;
-    console.log(answersdup)
+    // answersdup.push(friends[i].name) ;
+    // console.log(answersdup)
     score++;
     console.log(score)
 
