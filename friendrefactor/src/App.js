@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Score from "./components/Score";
+
+
 import friends from "./friends.json";
 
 
 
 let answers =[];
 // i dont think im actually using this answersdup variable
-let answersdup =[];
+// let answersdup =[];
 let score = 0;
 // function getRandomItem(friends) {
 //   let items = Array.from(friends);
@@ -61,7 +64,7 @@ class App extends Component {
 
     
     {console.log("seems to work ");
-    alert("restarting")
+    alert(`Game Over. Final Score: `+ score)
     window.location.reload();
 
     function empty() {
@@ -82,8 +85,7 @@ class App extends Component {
     // if (id===friends[j].id){
     // answersdup.push(friends[i].name) ;
     // console.log(answersdup)
-    score++;
-    console.log(score)
+   
 
   // }
     // this.setState({ answers });
@@ -104,6 +106,8 @@ class App extends Component {
         answers.length>=2)
       //  )
         {console.log("here")}
+        score++;
+        console.log(score)
 
 
       // console.log(turns )
@@ -153,8 +157,12 @@ class App extends Component {
 
     
     return (
+      
       <Wrapper>
-        <Title>Friends List</Title>
+
+        <Title>Friends List         <Score>{[score]}</Score>
+</Title>
+
         
         {this.state.randomItem.map(randomItem => (
           
@@ -163,6 +171,7 @@ class App extends Component {
             id={randomItem.id}
             key={randomItem.id}
             name={randomItem.name}
+            
             image={randomItem.image}
             occupation={randomItem.occupation}
             location={randomItem.location}

@@ -7,7 +7,15 @@ function FriendCard(props) {
   // console.log(props.id[Math.floor(Math.random()*props.id)])
 
   return (
+    
+
+ 
     <div className="card">
+      
+
+
+
+      
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
