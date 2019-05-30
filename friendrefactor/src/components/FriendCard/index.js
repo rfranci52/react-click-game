@@ -10,7 +10,7 @@ function FriendCard(props) {
     
 
  
-    <div className="card">
+    <div  onClick={() => props.removeFriend(props.id)} className="remove" className="card">
       
 
 
@@ -32,11 +32,11 @@ function FriendCard(props) {
           </li>
         </ul>
       </div>
-      <span onClick={() => props.removeFriend(props.id)} className="remove">
+      {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
         
         
         𝘅
-      </span>
+      </span> */}
       {/* <span onClick={() => props.removeFriend2(props.id)} className="remove">
         
         𝘅

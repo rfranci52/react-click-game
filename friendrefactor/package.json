@@ -27,5 +27,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+    
+  },"homepage" : "https://rfranci52.github.io/react-click-game/"
+
 }
